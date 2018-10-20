@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+{% block stylesheets %}{% endblock %}
+
+{% block body %}
+    <li class="choice-list">
+        <ul>
+            <a href="{{ path('joke_new') }}">Déposer une Joke</a>
+        </ul>
+        <ul>
+            <a href="#">Voter pour la meilleure Joke</a>
+        </ul>
+        <ul>
+            <a href="{{ path('joke_index') }}"> Voir toutes les Jokes</a>
+        </ul>
+    </li>
+
+{% endblock %}

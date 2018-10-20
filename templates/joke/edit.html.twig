@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Joke{% endblock %}
+
+{% block body %}
+<div id="joke-update-container">
+    <h1>Modifier la joke</h1>
+
+    <div class="col-sm-12 portfolio-item thumb-post">
+        <div class="portfolio-caption">
+            {{ include('joke/_form.html.twig', {'button_label': 'Update'}) }}
+        </div>
+    </div>
+
+    <div class="joke-show-buttons">
+
+        {{ include('joke/_delete_form.html.twig') }}
+        <a class="btn joke-button-back" href="{{ path('joke_index') }}">Retour à la liste des jokes</a>
+    </div>
+</div>
+
+{% endblock %}

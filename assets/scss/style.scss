@@ -1,0 +1,60 @@
+body {
+    background-image: url("../images/fond_rose.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: initial;
+}
+#body-initial {
+    margin-top: 150px;
+}
+
+
+.choice-list {
+    display: block;
+    position: absolute;
+    top: 88%;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+}
+
+.choice-list ul {
+    display: inline-block;
+    padding:0;
+    padding-right: 4%;
+}
+
+.choice-list ul a {
+    background: lightgrey;
+    border-radius: 1em;
+    height: 4em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    padding: 1em;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.choice-list ul a:hover {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+}
+
+.choice-list ul a:focus {
+    outline:none
+}
+
+.navbar-brand {
+    position: absolute;
+    top: 115%;
+    left: 33%;
+    width: 500px;
+}
+
+.navbar-brand img {
+    position: relative;
+    width: 100%;
+
+}

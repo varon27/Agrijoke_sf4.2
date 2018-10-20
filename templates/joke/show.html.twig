@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Joke{% endblock %}
+
+{% block body %}
+    <div id="joke-show-container">
+        <h1>La joke en détails</h1>
+
+        <div class="col-sm-12 portfolio-item thumb-post">
+            <div class="portfolio-caption">
+                <h4>{{ joke.Content }}</h4>
+                <blockquote>{{ joke.Author }}</blockquote>
+                <blockquote>{{ joke.Date ? joke.Date|date('Y-m-d') : '' }}</blockquote>
+            </div>
+        </div>
+
+        <div class="joke-show-buttons">
+            <a class="btn joke-button-edit" href="{{ path('joke_edit', {'id': joke.id}) }}">Modifier</a>
+            {{ include('joke/_delete_form.html.twig') }}
+            <a class="btn joke-button-back" href="{{ path('joke_index') }}">Retour à la liste des jokes</a>
+        </div>
+    </div>
+{% endblock %}

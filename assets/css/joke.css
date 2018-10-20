@@ -1,0 +1,76 @@
+
+.recipe-container{ width: 90%;}
+.portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+.portfolio-item .thumb-post{border-radius: 3px;}
+.portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+/*>>>>>>>>>>>>>>>>>>>> hover thumbnail <<<<<<<<<<<<<<<<<<<<<<*/
+.portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    opacity: 0;
+    background: rgba(83, 12, 179, 0.9);
+}
+.portfolio-item .portfolio-link .portfolio-hover:hover { opacity: 1; }
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    color: white;
+}
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {margin-top: -12px; }
+/*>>>>>>>>>>>>>>>>>>>> end hover thumbnail <<<<<<<<<<<<<<<<<<<<<<*/
+
+.portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.portfolio-item .portfolio-caption h4 {
+    margin: 0;
+    text-transform: none;
+    font-family: monospace;
+    font-size: 1em;
+    font-weight: bold;
+}
+.portfolio-item .portfolio-caption p {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+@media (min-width: 767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+.instruction{
+    font-size: 16px;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.img-recipe{width: 40%;}
+.img-fluid{
+    border: 2px solid #564b4b;
+    border-style: dashed;
+}
+
