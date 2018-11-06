@@ -1,0 +1,143 @@
+
+
+/************ GENERAL                                            base.html.twig **********/
+body {
+  /*display: flex;*/
+  /*
+  background-image: url("../images/background_grass_sky.jpg");
+  */
+  background-image: url(https://preview.ibb.co/hQbGYA/background-grass-sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: initial;
+  padding: 0;
+  margin:0;
+}
+
+body, html {
+  height:100%;
+}
+
+#container-initial {
+  /*display: flex;*/
+  /*max-width:1280px;*/
+  min-height:100%;
+  margin:0 auto;
+  position:relative;
+}
+
+#body-initial {
+  h1 {
+    font-family: 'Mali', cursive;
+    /*font-family: 'Inconsolata', monospace;*/
+    line-height: 1.5;
+  }
+}
+form #joke {
+  font-family: 'Mali', cursive;
+}
+
+.choice-list {
+  display: block;
+
+
+  ul {
+    display: inline-block;
+
+    a {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.8em;
+      padding: 1em;
+      transition-duration: 0.4s;
+      text-decoration: none;
+      color: #4CAF50;
+    }
+  }
+}
+
+/* --------------------------------- */
+
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+}
+
+.joke-button-back {
+  background-color: #8ec03c;
+  color: black;
+}
+
+.joke-button-edit {
+  background-color: lightcoral;
+  color: black;
+}
+
+.joke-button-see {
+  background-color: cadetblue;
+  color: black;
+}
+
+.joke-button-add {
+  background-color: #8ec03c;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+#joke-show-container {
+  background-color: white;
+  padding: 3rem;
+  border-style: dashed;
+}
+
+#joke-update-container {
+  background-color: #57bfff;
+  padding: 3rem;
+  border-style: dashed;
+}
+
+.joke-show-buttons {
+  display: inline-flex;
+}
+
+/* --------------Gallery------------------- */
+
+#gallery {
+  position:absolute;
+  bottom:0;
+  /*width:100%;*/
+  /*padding-top:50px;*/
+
+  /*position: relative;*/
+  height: 256px;
+  overflow: hidden;
+  /*padding: 0 30px 0 30px;*/
+}
+
+.gallery-next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: -25px;
+  height: 256px;
+  width: 107px;
+  background: url(https://image.ibb.co/mT4mfq/arrows-left-right-slider-31125.png) right top ;
+}
+
+.gallery-previous {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: -25px;
+  height: 256px;
+  width: 107px;
+  background: url(https://image.ibb.co/mT4mfq/arrows-left-right-slider-31125.png) left top;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  width:1000px;
+  height: 256px;
+  top: 16px
+}

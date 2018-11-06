@@ -6,13 +6,14 @@
 {% block body %}
     <li class="choice-list">
         <ul>
-            <a href="{{ path('joke_new') }}">Déposer une Joke</a>
+            <a href="{{ path('joke_new') }}">
+                <img src="{{ asset('../assets/images/clouds/cloud1.png') }}" border="0" width="200" alt="Logo Agrijoke">Déposer une Joke</a>
         </ul>
+
         <ul>
-            <a href="#">Voter pour la meilleure Joke</a>
-        </ul>
-        <ul>
-            <a href="{{ path('joke_index') }}"> Voir toutes les Jokes</a>
+            <a href="{{ path('joke_index') }}">
+                <img src="{{ asset('../assets/images/clouds/cloud2.png') }}" border="0" width="200" alt="Logo Agrijoke">Les Jokes</a>
+
         </ul>
     </li>
 

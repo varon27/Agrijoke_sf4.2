@@ -1,21 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Listes des jokes{% endblock %}
+{% block title %}Liste des jokes{% endblock %}
 {% block stylesheets %}<link rel="stylesheet" href="{{ asset('../assets/css/joke.css') }}">{% endblock %}
 
 {% block body %}
     <h1>Toutes les jokes</h1>
-    <div class="row">
+
+    <div id="gallery" >
+        <div class="slider">
+            {% for joke in jokes %}
+            <div class="col-md-4 col-sm-6 portfolio-item thumb-post">
+                <div class="portfolio-caption">
+                    <h4>{{ joke.Content }}</h4>
+                    <blockquote>{{ joke.Author }}</blockquote>
+                    <blockquote>{{ joke.Date ? joke.Date|date('Y-m-d') : '' }}</blockquote>
+                </div>
+                <div>
+                    <a class="btn joke-button-see" href="{{ path('joke_show', {'id': joke.id}) }}">voir</a>
+                    <a class="btn joke-button-edit" href="{{ path('joke_edit', {'id': joke.id}) }}">modifier</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="gallery-next"></div>
+        <div class="gallery-previous"></div>
+
+    </div>
+
+
+    {#<div class="row">
         {% for joke in jokes %}
             <div class="col-md-4 col-sm-6 portfolio-item thumb-post">
-                <a class="portfolio-link" href="{#{{ path ('recipe',{'id': drink.idDrink }) }}#}">
-                    {#<div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-glass fa-3x" aria-hidden="true"></i>
-                        </div>
-                    </div>#}
-                    {#<img class="img-fluid" src="#}{#{{ drink.strDrinkThumb }}#}{#" alt="#}{#{{ drink.strDrink }}#}{#">#}
-                </a>
                 <div class="portfolio-caption">
                     <h4>{{ joke.Content }}</h4>
                     <blockquote>{{ joke.Author }}</blockquote>
@@ -29,12 +45,13 @@
 
 
 
-        {% else %}
+        #}{#{% else %}
             <tr>
                 <td colspan="5">aucune joke déposée :(</td>
             </tr>
-        {% endfor %}
-    </div>
+        {% endfor %}#}{#
+    </div>#}
 
     <a class="btn joke-button-add" href="{{ path('joke_new') }}">Ajouter une joke</a>
 {% endblock %}
+
